@@ -5,7 +5,7 @@ import './Hero.css';
 
 // --- NUEVO: IMPORTAR TUS 3 ANIMACIONES ---
 // Asegúrate de tener estos 3 archivos en tu carpeta src/assets/
-import devAnim from '../assets/developer.json';      // Para la escena 1
+import devAnim from '../assets/develooper.json';      // Para la escena 1
 import storeAnim from '../assets/ecommerce.json';    // Para la escena 2 (descárgala)
 import appAnim from '../assets/mobile_app.json';    // Para la escena 3 (descárgala)
 

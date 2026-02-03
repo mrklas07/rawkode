@@ -1,0 +1,159 @@
+/* Variables para mantener la consistencia */
+:root {
+  --raw-black: #0a0a0a;
+  --raw-white: #ffffff;
+  --raw-gray: #f4f4f4;
+  --raw-red: #E50914; /* Rojo Rawkode */
+  --border-color: #333;
+}
+
+.calculator-container {
+  background-color: var(--raw-black);
+  color: var(--raw-white);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace; /* Fuente técnica */
+}
+
+.calculator-header h2 {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+  color: var(--raw-red);
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+/* Barra de progreso */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: black;
+  color: #555;
+}
+
+.step.active {
+  border-color: var(--raw-red);
+  color: var(--raw-white);
+  background: var(--raw-red);
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background: var(--border-color);
+  margin: 0 10px;
+}
+
+/* Opciones */
+.options-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--raw-white);
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit; /* Heredar fuente mono */
+}
+
+.option-btn:hover {
+  border-color: var(--raw-white);
+}
+
+.option-btn.selected {
+  background: var(--raw-white);
+  color: var(--raw-black);
+  border-color: var(--raw-white);
+  font-weight: bold;
+}
+
+/* Botones de navegación */
+.nav-btns {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #777;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Resultado Final */
+.result-box {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--border-color);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.price-display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.amount {
+  color: var(--raw-red);
+  margin-left: 10px;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366; /* Verde WhatsApp */
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: transform 0.2s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  background-color: #20bd5a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

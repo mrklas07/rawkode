@@ -1,0 +1,172 @@
+/* Services.css */
+.services-section {
+  background-color: #080808; /* Un poco más claro que el negro puro del fondo */
+  padding: 100px 20px;
+  position: relative;
+  border-top: 1px solid #222;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- CABECERA --- */
+.section-header {
+  text-align: left;
+  margin-bottom: 60px;
+  max-width: 700px;
+}
+
+.section-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #E50914;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.red-text {
+  color: #E50914;
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #888;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- GRID DE TARJETAS --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.service-card {
+  background: #111;
+  padding: 40px 30px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  group: hover;
+}
+
+/* Efecto Hover: Sube un poco y el borde brilla */
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #444;
+  background: #151515;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-icon {
+  color: #fff;
+  margin-bottom: 25px;
+  background: #222;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.service-card:hover .card-icon {
+  background: #E50914;
+  color: #fff;
+}
+
+.service-card h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.service-card p {
+  font-family: 'Inter', sans-serif;
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ETIQUETAS (Tags) */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #666;
+  border: 1px solid #333;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* --- STACK TECNOLÓGICO (Parte inferior) --- */
+.tech-stack {
+  border-top: 1px solid #222;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0.6;
+}
+
+.stack-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.stack-logos {
+  display: flex;
+  gap: 15px;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.separator {
+  color: #E50914;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .tech-stack {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stack-logos {
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+}

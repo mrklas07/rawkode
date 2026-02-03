@@ -51,4 +51,5 @@ function App() {
   );
 }
 
+// Actualización forzada para Vercel
 export default App;
